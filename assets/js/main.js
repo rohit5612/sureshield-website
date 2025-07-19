@@ -12,29 +12,40 @@ const header = document.getElementById("mainHeader");
   });
 
 
-// ------form handler-----
 
-function setupContactFormValidation() {
-  const form = document.querySelector("#contactForm");
-  if (!form) return;
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Auto-collapse offcanvas on link click
+  const offcanvas = document.querySelector(".offcanvas");
+  if (offcanvas) {
+    const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvas);
+    offcanvas.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        bsOffcanvas.hide();
+      });
+    });
+  }
 
-  form.addEventListener("submit", function (e) {
-    const name = form.querySelector("[name='name']").value.trim();
-    const email = form.querySelector("[name='email']").value.trim();
-    const subject = form.querySelector("[name='subject']").value.trim();
-    const message = form.querySelector("[name='message']").value.trim();
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let errorMessage = "";
-
-    if (!name) errorMessage += "Name is required.\n";
-    if (!email || !emailPattern.test(email)) errorMessage += "Valid email is required.\n";
-    if (!subject) errorMessage += "Subject is required.\n";
-    if (!message) errorMessage += "Message is required.\n";
-
-    if (errorMessage) {
-      e.preventDefault(); // stop form from submitting
-      alert(errorMessage);
-    }
+  // 2. Scroll to top on internal link click
+document.querySelectorAll('a[href^="#"], a[href^="/"], a[href^="."]').forEach((link) => {
+    link.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   });
-}
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookieConsent");
+  const acceptBtn = document.getElementById("acceptCookies");
+
+  // Check cookie
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.classList.remove("d-none");
+  }
+
+  // Accept button click
+  acceptBtn?.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.classList.add("d-none");
+  });
+});

@@ -67,7 +67,8 @@ async function loadPage(page, animate = true, direction = "forward") {
           if (oldContent) oldContent.remove();
           isTransitioning = false;
 
-          if (page === "contact") setupContactFormValidation(); // ✅ Inject only after content is fully replaced
+          if (page === "contact") setupContactFormValidation();
+          window.scrollTo({ top: 0, behavior: "smooth" }); // ✅ scroll to top after animation
         },
         { once: true }
       );
@@ -78,7 +79,8 @@ async function loadPage(page, animate = true, direction = "forward") {
       contentArea.appendChild(newContent);
       isTransitioning = false;
 
-      if (page === "contact") setupContactFormValidation(); // ✅ In case no animation
+      if (page === "contact") setupContactFormValidation();
+      window.scrollTo({ top: 0, behavior: "smooth" }); // ✅ scroll to top immediately if no animation
     }
 
     currentPage = page;
