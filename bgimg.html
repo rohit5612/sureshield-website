@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Responsive Security Banner</title>
+  <style>
+    /* --- Reset & Body --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    body {
+      background: #b5dfde7d;
+      display: flex; align-items: center; justify-content: flex-end;
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    /* --- Pixelated Left Background --- */
+    .pixel-bg {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #fbfbfb;
+      background-image:
+        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+      background-size: 16px 16px;
+      mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, transparent 80%);
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, transparent 80%);
+      z-index: 1;
+    }
+
+    /* --- Main Circle Container (Responsive) --- */
+    .hero {
+      position: relative;
+      right: 50px;
+      width: 80vmin;
+      height: 80vmin;
+      max-width: 500px;
+      max-height: 500px;
+      z-index: 2;
+    }
+
+    /* --- Concentric Rings --- */
+    .ring {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* --- Animations --- */
+    @keyframes rotateCW { to { transform: translate(-50%, -50%) rotate(360deg); }}
+    @keyframes rotateCCW { to { transform: translate(-50%, -50%) rotate(-360deg); }}
+
+    /* Outer ring (100% of container) */
+    .ring.r1 {
+      width: 100%; height: 100%;
+      border: 4px solid rgba(80,80,80,0.5);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      animation: rotateCCW 20s linear infinite;
+    }
+
+    /* 2nd ring (80%) */
+    .ring.r2 {
+      width: 80%; height: 80%;
+      border: 3px dotted rgba(120,120,120,0.6);
+      animation: rotateCCW 18s linear infinite;
+    }
+
+    /* 3rd ring (72%) */
+    .ring.r3 {
+      width: 72%; height: 72%;
+      animation: rotateCW 15s linear infinite;
+    }
+    .ring.r3::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 45deg,
+        rgba(200,200,200,0.6) 0% 10%, transparent 10% 25%,
+        rgba(200,200,200,0.6) 25% 35%, transparent 35% 100%
+      );
+    }
+
+    /* 4th ring (56%) */
+    .ring.r4 {
+      width: 56%; height: 56%;
+      animation: rotateCCW 12s linear infinite;
+    }
+    .ring.r4::before {
+      content: "";
+      position: absolute; inset: 0; border-radius: 50%;
+      background: conic-gradient(
+        from -15deg,
+        rgba(0,192,255,0.3) 0%, rgba(0,192,255,0.1) 50%, rgba(0,192,255,0.3) 100%
+      );
+    }
+
+    /* 5th ring (48%) */
+    .ring.r5 {
+      width: 48%; height: 48%;
+      animation: rotateCW 10s linear infinite;
+    }
+    .ring.r5::before {
+      content: "";
+      position: absolute; inset: 0; border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(0,192,255,0.4) 0%, transparent 70%
+      );
+    }
+
+    /* --- Padlock SVG (Responsive) --- */
+    .lock {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 24%; height: 24%;
+      max-width: 120px; max-height: 120px;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+    .lock svg {
+      width: 100%; height: 100%; fill: #ffffff;
+      filter: drop-shadow(0 0 8px rgba(0,192,255,0.6))
+              drop-shadow(0 0 4px rgba(255,255,255,0.4));
+    }
+    .circuit-lines { stroke: #00c0ff; stroke-width: 2; fill: none; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <div class="pixel-bg"></div>
+
+  <div class="hero">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="ring r3"></div>
+    <div class="ring r4"></div>
+    <div class="ring r5"></div>
+
+    <div class="lock">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="28" width="32" height="28" rx="4" ry="4"/>
+        <path d="M24,28 V18 A8,8 0 0 1 40,18 V28" stroke="#ffffff" stroke-width="4" fill="none"/>
+        <circle cx="32" cy="42" r="4" fill="#00c0ff"/>
+        <path class="circuit-lines" d="M18,34 L26,34 M38,34 L46,34 M18,38 L26,38 M38,38 L46,38 M32,28 L32,22"/>
+      </svg>
+    </div>
+  </div>
+
+</body>
+</html>
