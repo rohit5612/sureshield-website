@@ -2,99 +2,117 @@
     <section id="home">
         
 
-        <header class="bg-light">
-            <div class="container col-xxl-8 px-4 py-5">
-                <div  class="row flex-lg-row align-items-center g-5 py-5">
-                    <!-- <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="./assets/images/test-banner.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                    </div> -->
-                    <div class="col-lg-12 hero-styling">
-                        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><em>"Your Shield of Strength. Your Engine of Efficiency."</em></h1>
-                        <p  class="lead text-dark fs-3 py-4 hero-bg">
-                            SureShield Security Pvt. Ltd. is an ISO 9001:2015 certified company providing integrated security, housekeeping, and manpower solutions across Rajasthan. With a management team of ex-servicemen and industry veterans, we deliver 24/7 protection, professional facility management, and complete staffing solutions tailored to your needs.
-                        </p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a style="text-decoration: none; color:#302a2a" href="#about">Read More</a></button>
-                            <button type="button" class="btn btn-dark btn-lg px-4"><a style="text-decoration: none; color:#c07a0a" href="#contact">Got a query?</a></button>
-                        </div>
-                    </div>
+        <header class="hero-section">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./assets/video/bg-lock-ani.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Optional Overlay for contrast -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="container col-xxl-8 px-4 py-5 hero-content">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+            <div class="col-lg-12 hero-styling">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                <em>"Your Shield of Strength. Your Engine of Efficiency."</em>
+                </h1>
+                <p class="lead fs-3 py-4">
+                SureShield Security Pvt. Ltd. delivers integrated security, facility management, and manpower solutions throughout Rajasthan. Led by experienced ex-servicemen and industry experts, we specialize in round-the-clock protection, professional housekeeping, and workforce solutions designed for maximum reliability and operational efficiency.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="#about" class="btn btn-primary btn-lg px-4 me-md-2 text-dark text-decoration-none">Read More</a>
+                <a href="#contact" class="btn btn-dark btn-lg px-4 text-warning text-decoration-none">Got a query?</a>
                 </div>
             </div>
+            </div>
+        </div>
         </header>
 
 
+
+        
+
         <!------services-------->
         <section class="px-0 py-2" id="services">
-            <h2 class="pb-4 py-4 border-bottom text-center section-heading" style="font-size:2.5rem;">Our Services</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Security Services</h3>
-                        <p>End-to-end guarding solutions for commercial, residential, institutional, and industrial premises with trained, verified personnel.</p>
+            <div class="container">
+                <h2 class="pb-4 py-4 border-bottom text-center section-heading" style="font-size:2.5rem;">Service Portfolio</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Security Services</h3>
+                            <p>End-to-end guarding solutions for commercial, residential, institutional, and industrial premises with trained, verified personnel.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-success flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#cpu-fill"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Facility Management</h3>
-                        <p>Professional housekeeping and maintenance with trained staff, quality checks, and environment-friendly practices.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-success flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#cpu-fill"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Facility Management</h3>
+                            <p>Professional housekeeping and maintenance with trained staff, quality checks, and environment-friendly practices.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-warning flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#calendar3"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Event Security</h3>
-                        <p>Custom security planning and on-ground execution for private, public, and VIP events.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-warning flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#calendar3"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Event Security</h3>
+                            <p>Custom security planning and on-ground execution for private, public, and VIP events.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-danger flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#home"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Residential Security</h3>
-                        <p>Guards and surveillance for gated communities, apartments, and individual homes.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-danger flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#home"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Residential Security</h3>
+                            <p>Guards and surveillance for gated communities, apartments, and individual homes.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-info flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#speedometer2"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Corporate Security</h3>
-                        <p>Specialized services for office complexes, banks, malls, and business parks.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-info flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#speedometer2"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Corporate Security</h3>
+                            <p>Specialized services for office complexes, banks, malls, and business parks.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#toggles2"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Technical Services</h3>
-                        <p>Installation and monitoring of security cameras, alarms, and access control systems.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#toggles2"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Technical Services</h3>
+                            <p>Installation and monitoring of security cameras, alarms, and access control systems.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-dark flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#geo-fill"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Pan-Rajasthan Coverage</h3>
-                        <p>Presence in Jaipur, Udaipur, Kota, Ajmer, Jodhpur, and other key cities.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-dark flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#geo-fill"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Pan-Rajasthan Coverage</h3>
+                            <p>Presence in Jaipur, Udaipur,Bhilwara, Ajmer, Jodhpur.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-warning flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#tools"></use></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Custom Solutions</h3>
-                        <p>Tailor-made packages for manpower, logistics, and facility operations.</p>
+                    <div class="col d-flex align-items-start">
+                        <svg class="bi text-warning flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+                        <div>
+                            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Custom Solutions</h3>
+                            <p>Tailor-made packages for manpower, logistics, and facility operations.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        
+
+
         <section id="more-services">
             <div class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom section-heading">Our Strengths</h2>
+            <h2 class="pb-2 border-bottom-1 section-heading">Built on Strength & Trust</h2>
             <div class="row row-cols-1 row-cols-md-2 align-items-center g-5 py-5">
                 
                 <div class="col d-flex flex-column align-items-center gap-2">
                 <h2 class="fw-bold text-body-emphasis">Discipline, Dedication & Dependability</h2>
                 <p class="text-body-secondary">
-                    SureShield stands apart through our commitment to quality, accountability, and rapid response. Whether it’s a single guard or a turnkey security solution, we bring military-level discipline and decades of combined experience to every assignment.
+                    SureShield stands apart with our commitment to quality, accountability, and rapid response. Whether it’s a single guard or a turnkey security solution, we bring military-level discipline and decades of combined experience to every assignment.
                 </p>
                 <a href="#services" class="btn btn-primary btn-lg">Explore Our Services</a>
                 </div>
@@ -141,34 +159,38 @@
         </section>
 
 
-        <!-- ✅ Carousel Section -->
-        <section class="py-4 px-0" id="services-car">
-            <div class="container">
-            <h2 class="text-center border-bottom pb-3 mb-4 section-heading">Why Clients Trust Us</h2>
-            <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner text-center px-5">
-                <div class="carousel-item active">
-                    <h5>💼 Industry Experts</h5>
-                    <p>Led by ex-armed forces personnel and professionals with over a decade of security leadership.</p>
-                </div>
-                <div class="carousel-item px-5">
-                    <h5>👮‍♂️ Certified Staff</h5>
-                    <p>Every recruit undergoes background verification, medical checks, and standard training.</p>
-                </div>
-                <div class="carousel-item px-5">
-                    <h5>🕒 24/7 Availability</h5>
-                    <p>Our control room, mobile patrol, and client support work around the clock.</p>
-                </div>
-                </div>
-                <button class="carousel-control-prev px-2" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next px-2" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                </button>
+        <section class="py-4 px-0" id="clients">
+        <div class="container">
+            <h3 style="font-size:2.5rem;" class="text-center border-bottom pb-3 mb-4 section-heading">Trusted by Leading Clients</h3>
+
+            <div class="logos-slider overflow-hidden ">
+            <div class="logos-track d-flex align-items-center gap-5">
+                <!-- Sample client logos (replace src with real client logo URLs) -->
+                <img src="./assets/images/logos/contacare.jpg" alt="Client 1" class="client-logo" />
+                <img src="./assets/images/logos/dhanwantri.jpg" alt="Client 2" class="client-logo" />
+                <img src="./assets/images/logos/felicity.jpg" alt="Client 3" class="client-logo" />
+                <img src="./assets/images/logos/harish.jpg" alt="Client 4" class="client-logo" />
+                <img src="./assets/images/logos/kanha.jpg" alt="Client 5" class="client-logo" />
+                <img src="./assets/images/logos/narayan.jpg" alt="Client 6" class="client-logo" />
+                <img src="./assets/images/logos/oppo.jpg" alt="Client 7" class="client-logo" />
+                <img src="./assets/images/logos/shiv.jpg" alt="Client 8" class="client-logo" />
+                <img src="./assets/images/logos/valueplus.jpg" alt="Client 9" class="client-logo" />
+                <!-- Duplicate for seamless loop -->
+                <img src="./assets/images/logos/contacare.jpg" alt="Client 1" class="client-logo" />
+                <img src="./assets/images/logos/dhanwantri.jpg" alt="Client 2" class="client-logo" />
+                <img src="./assets/images/logos/felicity.jpg" alt="Client 3" class="client-logo" />
+                <img src="./assets/images/logos/harish.jpg" alt="Client 4" class="client-logo" />
+                <img src="./assets/images/logos/kanha.jpg" alt="Client 5" class="client-logo" />
+                <img src="./assets/images/logos/narayan.jpg" alt="Client 6" class="client-logo" />
+                <img src="./assets/images/logos/oppo.jpg" alt="Client 7" class="client-logo" />
+                <img src="./assets/images/logos/shiv.jpg" alt="Client 8" class="client-logo" />
+                <img src="./assets/images/logos/valueplus.jpg" alt="Client 9" class="client-logo" />
             </div>
             </div>
+        </div>
         </section>
+        <!-- ✅ Carousel Section -->
+        
 
     </section>
 </div>
